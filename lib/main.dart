@@ -15,33 +15,93 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.black45,
       ),
       body: SafeArea(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          verticalDirection: VerticalDirection.down,
-          // mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              child: Text('Container 1'),
-              height: 150.0,
-              width: 150.0,
-              alignment: Alignment.center,
-              color: Colors.blueAccent[200],
+            CircleAvatar(
+              backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+              radius: 50.0,
+              backgroundColor: Colors.pink,
             ),
-            Container(
-              child: Text('Container 2'),
-              height: 100.0,
-              width: 100.0,
-              alignment: Alignment.center,
-              color: Colors.red,
+            SizedBox(
+              height: 10.0,
             ),
-            Expanded(
-              child: Container(
-                child: Text('Container 3'),
-                alignment: Alignment.center,
-                color: Colors.yellow,
+            Text(
+              'Poppy Sari',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 40.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
-            )
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              'SOFTWARE DEVELOPER',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16.0,
+                fontFamily: 'Source Sans Pro',
+                letterSpacing: 2.5,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.phone,
+                    size: 16.0,
+                    color: Colors.teal,
+                  ),
+                  SizedBox(width: 10.0),
+                  Text(
+                    '+628 58133 72797',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontFamily: 'Open Sans Pro',
+                      fontSize: 18.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      size: 16.0,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(width: 10.0),
+                    Text(
+                      'red.alpacca@gmail.com',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'Open Sans Pro',
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
