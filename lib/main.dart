@@ -54,51 +54,47 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            Container(
+            Card(
               color: Colors.white,
-              padding: EdgeInsets.all(10.0),
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
-                    size: 16.0,
-                    color: Colors.teal,
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+628 58133 72797',
+                  style: TextStyle(
+                    color: Colors.teal[900],
+                    fontFamily: 'Open Sans Pro',
+                    fontSize: 18.0,
                   ),
-                  SizedBox(width: 10.0),
-                  Text(
-                    '+628 58133 72797',
-                    style: TextStyle(
-                      color: Colors.teal[900],
-                      fontFamily: 'Open Sans Pro',
-                      fontSize: 18.0,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
             Card(
               color: Colors.white,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      size: 16.0,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(width: 10.0),
-                    Text(
-                      'red.alpacca@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal[900],
-                        fontFamily: 'Open Sans Pro',
-                        fontSize: 18.0,
-                      ),
-                    ),
-                  ],
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  'red.alpacca@gmail.com',
+                  style: TextStyle(
+                    color: Colors.teal[900],
+                    fontFamily: 'Open Sans Pro',
+                    fontSize: 18.0,
+                  ),
+                ),
+                subtitle: Text(
+                  'Dont hesitate to contact me',
+                  style: TextStyle(
+                    color: Colors.teal[900],
+                    fontFamily: 'Open Sans Pro',
+                    fontSize: 14.0,
+                  ),
                 ),
               ),
             ),
