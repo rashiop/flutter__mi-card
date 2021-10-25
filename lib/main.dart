@@ -10,21 +10,39 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       backgroundColor: Colors.teal,
-      // appBar: AppBar(
-      //   title: Text('Halo'),
-      //   backgroundColor: Colors.black45,
-      // ),
+      appBar: AppBar(
+        title: Text('Layout'),
+        backgroundColor: Colors.black45,
+      ),
       body: SafeArea(
-        child: Container(
-          child: Text('Hello'),
-          height: 150.0,
-          width: 150.0,
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 15.0),
-          alignment: Alignment.center,
-          color: Colors.blueAccent[200],
-          // decoration: BoxDecoration(
-          //     shape: BoxShape.circle, color: Colors.blueAccent[200]),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          verticalDirection: VerticalDirection.down,
+          // mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              child: Text('Container 1'),
+              height: 150.0,
+              width: 150.0,
+              alignment: Alignment.center,
+              color: Colors.blueAccent[200],
+            ),
+            Container(
+              child: Text('Container 2'),
+              height: 100.0,
+              width: 100.0,
+              alignment: Alignment.center,
+              color: Colors.red,
+            ),
+            Expanded(
+              child: Container(
+                child: Text('Container 3'),
+                alignment: Alignment.center,
+                color: Colors.yellow,
+              ),
+            )
+          ],
         ),
       ),
     ));
